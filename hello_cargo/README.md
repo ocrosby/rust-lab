@@ -47,3 +47,6 @@ cargo check
 cargo build --release
 ```
 
+## References
+
+- [Ultimate Neovim setup for Rust development](https://www.youtube.com/watch?v=E2mKJ73M9pg)
