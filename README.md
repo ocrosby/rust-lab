@@ -9,4 +9,44 @@ cargo new hello_cargo
 cd hello_cargo
 ```
 
+## Common Programming Concepts
 
+- variables
+- basic types
+- functions
+- comments
+- control flow
+
+### Variables and Mutability
+
+By default, variables are immutable. However, you still have the option to make
+your variables mutable.
+
+When a variable is immutable, once a value is bound to a name, you can't change
+that value.
+
+```rust
+fn main() {
+    let x = 5;
+    println!("The value of x is: {x}");
+    x = 6;
+    println!("The value of x is: {x}");
+}
+```
+
+When you save and run the program using `cargo run` you should receive an error
+message regarding an immutability error.
+
+Now if you change the let declaration/assignment 
+
+```rust
+fn main() {
+    let mut x = 5;
+    println!("The value of x is: {x}");
+    x = 6;
+    println!("The value of x is: {x}");
+}
+```
+
+Now executing this program using `cargo run` you will notice that you no longer
+receive the error. This is because we've made the value of x mutable.
