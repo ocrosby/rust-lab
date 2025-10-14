@@ -37,9 +37,9 @@ fn main() {
 When you save and run the program using `cargo run` you should receive an error
 message regarding an immutability error.
 
-Now if you change the let declaration/assignment 
+Now if you change the let declaration/assignment
 
-```rust
+```rust:
 fn main() {
     let mut x = 5;
     println!("The value of x is: {x}");
@@ -50,3 +50,23 @@ fn main() {
 
 Now executing this program using `cargo run` you will notice that you no longer
 receive the error. This is because we've made the value of x mutable.
+
+#### Constants
+
+Constant
+: constants are values that are bound to name and are not allowed to change
+
+- you are not allowed to use `mut` with constants
+- constants aren't just mutable by default -- they are always immutable
+- constants can be declared in any scope including the global scope
+- constants may be set only to a constant expression, not the result of a value that could only be computed at runtime
+
+```rust:
+// Declaring constants
+
+const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
+```
+
+
+
+
