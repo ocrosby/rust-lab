@@ -60,12 +60,19 @@ Constant
 - constants aren't just mutable by default -- they are always immutable
 - constants can be declared in any scope including the global scope
 - constants may be set only to a constant expression, not the result of a value that could only be computed at runtime
+- the naming convention for constants is to use all uppercase with underscores between wordsj
+
 
 ```rust:
 // Declaring constants
 
 const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 ```
+
+#### Shadowing
+
+You can declare a new variable with the same name as a previous variable. Rustaceans say that the first variable is shadowed by the second, which means that the second variable is what the compiler will see when you use the name of the variable.
+
 
 
 
